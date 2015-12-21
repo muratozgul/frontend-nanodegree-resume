@@ -1,3 +1,9 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+define(["jquery"], function($){
+  var resumeBuilder = {
+    start: function(){
+      console.log("resumeBuilder starting...");
+    }
+  };
+
+  return resumeBuilder;
+});

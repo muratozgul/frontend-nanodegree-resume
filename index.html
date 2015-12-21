@@ -19,7 +19,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta charset="utf-8">
 
   <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+  <title>Murat Ozgul's Resume</title>
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
@@ -37,18 +37,18 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+  <!-- <script src="js/jQuery.js"></script> -->
 
   <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
+  <!-- <script src="js/helper.js"></script> -->
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
 <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-
-  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X_UA_Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   <div id="main">
@@ -83,12 +83,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
   </div>
 
+  <script data-main="js/require_main.js" src="js/libs/require-2.1.22.min.js"></script>
+
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-  <script src="js/resumeBuilder.js"></script>
+  <!-- <script src="js/resumeBuilder.js"></script> -->
 
 
   <!--
@@ -99,6 +101,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   course.
   -->
 
+  <!--
   <script type="text/javascript">
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
@@ -136,5 +139,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
+  -->
 </body>
 </html>
