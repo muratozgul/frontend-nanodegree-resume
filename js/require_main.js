@@ -1,11 +1,31 @@
 requirejs.config({
   baseUrl: "js",
+  
   paths: {
-    jquery: "libs/jQuery"
+    text: "libs/requirejs/text",
+    json: "libs/requirejs/json",
+    jquery: "libs/jquery/jQuery",
+    user: "data/user",
+    builder: "app/resumeBuilder"
+  },
+
+  shim: {
+    jquery: {
+      deps: [],
+      exports: "$"
+    },
+    user: {
+      deps: ["jquery", "data/bio", "data/education", "data/projects", "data/work"],
+      exports: "user"
+    },
+    builder: {
+      deps: ["user"],
+      exports: "builder"
+    }
   }
 });
 
-require(["resumeBuilder"], function(resumeBuilder){ 
+require(["builder"], function(resumeBuilder){ 
   console.log("jQuery version: ", $.fn.jquery);
   resumeBuilder.start();
 });
