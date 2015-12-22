@@ -12,8 +12,8 @@ define(["app/templates", "user"], function(templates, user){
   
   function render(){
     //populate name & role
-    $(insert("HTMLheaderName",user.bio.name)).insertBefore("#topContacts");
-    $(insert("HTMLheaderRole",user.bio.role)).insertBefore("#topContacts");
+    $(insert("HTMLheaderName", user.bio.name)).insertBefore("#topContacts");
+    $(insert("HTMLheaderRole", user.bio.role)).insertBefore("#topContacts");
 
     //populate contacts
     insertInto("#topContacts", "HTMLmobile", user.bio.contacts.mobile);
