@@ -3,8 +3,9 @@ define([
     "app/bioView",
     "app/workView",
     "app/projectsView",
-    "app/educationView"
-  ], function(data, bioView, workView, projectsView, educationView){
+    "app/educationView",
+    "app/map"
+  ], function(data, bioView, workView, projectsView, educationView, mapView){
     
     var resumeBuilder = {
       build: function(){
@@ -12,6 +13,12 @@ define([
         workView.display();
         projectsView.display();
         educationView.display();
+        mapView.initializeMap();
+
+        // window.addEventListener('resize', function(e) {
+        //   //Make sure the map bounds get updated on page resize
+        //   mapView.map.fitBounds(mapView.mapBounds);
+        // });
       }
     };
 

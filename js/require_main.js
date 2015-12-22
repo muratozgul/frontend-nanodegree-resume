@@ -1,12 +1,16 @@
 requirejs.config({
+  waitSeconds : 120, //make sure it is enough to load all gmaps scripts
+  findNestedDependencies: true,
   baseUrl: "js",
   
   paths: {
+    async: "libs/requirejs/async",
     text: "libs/requirejs/text",
     json: "libs/requirejs/json",
     jquery: "libs/jquery/jQuery",
     user: "data/user",
-    builder: "app/resumeBuilder"
+    builder: "app/resumeBuilder",
+    GoogleMapsLoader: 'libs/requirejs/google-maps-loader'
   },
 
   shim: {
@@ -19,20 +23,28 @@ requirejs.config({
       exports: "user"
     },
     builder: {
-      deps: ["user"],
+      deps: ["user", "app/map"],
       exports: "builder"
     }
   }
 });
 
-require(["builder"], function(resumeBuilder){
+//"async!http://maps.google.com/maps/api/js?libraries=places"
+
+require(["builder", "GoogleMapsLoader"], function(resumeBuilder, GoogleMapsLoader){
+
+
 
   var internationalizeButton = '<button>Internationalize</button>';
-  var googleMap = '<div id="map"></div>';
 
   $(document).ready(function() {
-    // populate sections
-    resumeBuilder.build();
+    // once google map with all dependencies loads
+    GoogleMapsLoader.done(function(){
+      // populate sections
+      resumeBuilder.build();
+    }).fail(function(){
+      console.error("ERROR: Google maps library failed to load");
+    });
 
     // add name i18n button
     $("#main").append(internationalizeButton);
