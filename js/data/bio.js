@@ -10,7 +10,12 @@ define([], function() {
       "location": "Mountain View, CA"
     },
     "welcomeMessage": "Hello!",
-    "skills": "Cooking, programming",
+    "skills": [
+      "Cooking", 
+      "Programming",
+      "Lorem",
+      "Ipsum"
+    ],
     "biopic": "https://github.com/muratozgul/frontend-nanodegree-resume/blob/master/images/murat_picture_300x300.jpg?raw=true"
   };
 });

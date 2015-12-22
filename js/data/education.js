@@ -12,7 +12,7 @@ define([], function() {
       {
         "name": "Sabanci University",
         "location": "Istanbul, TURKEY",
-        "degree": "Bsc",
+        "degree": "BSc",
         "majors": ["Industrial Engineering"],
         "dates": 2010,
         "url": null

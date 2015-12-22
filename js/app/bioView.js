@@ -15,7 +15,7 @@ define(["app/templates", "user"], function(templates, user){
     $(insert("HTMLheaderName", user.bio.name)).insertBefore("#topContacts");
     $(insert("HTMLheaderRole", user.bio.role)).insertBefore("#topContacts");
 
-    //populate contacts
+    //populate header contacts
     insertInto("#topContacts", "HTMLmobile", user.bio.contacts.mobile);
     insertInto("#topContacts", "HTMLemail", user.bio.contacts.email);
     insertInto("#topContacts", "HTMLtwitter", user.bio.contacts.twitter);
@@ -34,6 +34,14 @@ define(["app/templates", "user"], function(templates, user){
         insertInto("#skills", "HTMLskills", user.bio.skills[index]);
       }
     }
+
+    //populate footer contacts
+    insertInto("#footerContacts", "HTMLmobile", user.bio.contacts.mobile);
+    insertInto("#footerContacts", "HTMLemail", user.bio.contacts.email);
+    insertInto("#footerContacts", "HTMLtwitter", user.bio.contacts.twitter);
+    insertInto("#footerContacts", "HTMLgithub", user.bio.contacts.github);
+    insertInto("#footerContacts", "HTMLblog", user.bio.contacts.twitter);
+    insertInto("#footerContacts", "HTMLlocation", user.bio.contacts.location);
   }
 
   return {
