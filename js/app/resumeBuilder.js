@@ -13,12 +13,17 @@ define([
         workView.display();
         projectsView.display();
         educationView.display();
-        mapView.initializeMap();
 
-        // window.addEventListener('resize', function(e) {
-        //   //Make sure the map bounds get updated on page resize
-        //   mapView.map.fitBounds(mapView.mapBounds);
-        // });
+        require(["async!http://maps.google.com/maps/api/js?libraries=places&callback=initMap"], function(){
+          // once google map with all dependencies loads
+          mapView.initializeMap();
+
+          window.addEventListener('resize', function(e) {
+          //Make sure the map bounds get updated on page resize
+          mapView.map.fitBounds(mapView.mapBounds);
+        });
+        });        
+        
       }
     };
 

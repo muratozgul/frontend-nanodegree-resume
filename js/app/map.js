@@ -41,7 +41,6 @@ define(["user"], function(user){
       // actually searching for location data.
       var service = new google.maps.places.PlacesService(self.map);
 
-      console.log("locations:", self.locations);
       // Iterates through the array of locations, creates a search object for each location
       for (var place in self.locations) {
 
