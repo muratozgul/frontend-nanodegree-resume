@@ -11,7 +11,6 @@ define([], function() {
         "dates": "2015",
         "description": "Description"
       }
-    ],
-    "display": null
+    ]
   };
 });

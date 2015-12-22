@@ -11,7 +11,6 @@ define([], function() {
     },
     "welcomeMessage": "Hello!",
     "skills": "Cooking, programming",
-    "biopic": "https://github.com/muratozgul/frontend-nanodegree-resume/blob/master/images/murat_picture_300x300.jpg?raw=true",
-    "display": null
+    "biopic": "https://github.com/muratozgul/frontend-nanodegree-resume/blob/master/images/murat_picture_300x300.jpg?raw=true"
   };
 });

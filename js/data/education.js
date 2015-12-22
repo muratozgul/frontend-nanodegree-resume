@@ -22,10 +22,9 @@ define([], function() {
       {
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "date": 2015,
+        "dates": 2015,
         "url": "https://www.udacity.com"
       }
-    ],
-    "display": null
+    ]
   };
 });

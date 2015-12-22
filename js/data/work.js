@@ -8,7 +8,6 @@ define([], function() {
         "dates": "2012-2013",
         "description": "Description"
       }
-    ],
-    "display": null
+    ]
   };
 });

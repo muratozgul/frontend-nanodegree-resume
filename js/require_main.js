@@ -25,37 +25,44 @@ requirejs.config({
   }
 });
 
-require(["builder"], function(resumeBuilder){ 
-  console.log("jQuery version: ", $.fn.jquery);
-  resumeBuilder.build();
+require(["builder"], function(resumeBuilder){
 
-  /*
-  The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. 
-  Don't delete! It hooks up your code to the button you'll be appending.
-  */
-  // $(document).ready(function() {
-  //   $('button').click(function() {
-  //     var iName = inName() || function(){};
-  //     $('#name').html(iName);  
-  //   });
-  // });
+  var internationalizeButton = '<button>Internationalize</button>';
+  var googleMap = '<div id="map"></div>';
 
-  // /*
-  // The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-  // */
-  // clickLocations = [];
+  $(document).ready(function() {
+    // populate sections
+    resumeBuilder.build();
 
-  // function logClicks(x,y) {
-  //   clickLocations.push(
-  //     {
-  //       x: x,
-  //       y: y
-  //     }
-  //   );
-  //   console.log('x location: ' + x + '; y location: ' + y);
-  // }
+    // add name i18n button
+    $("#main").append(internationalizeButton);
 
-  // $(document).click(function(loc) {
-  //   // your code goes here!
-  // });
+    // bind click listener to name i18n button
+    $('button').click(function() {
+      var iName = inName($('#name').html()) || function(){};
+      $('#name').html(iName);  
+    });
+  });
+  
+  // Internationalize name
+  function inName(name){
+    name = name.trim().split(" ");
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0, 1).toUpperCase() + 
+              name[0].slice(1).toLowerCase();
+
+    return name.join(" ");
+  }
+
+  // The next few lines about clicks locations
+  var clickLocations = [];
+
+  function logClicks(x, y) {
+    clickLocations.push({x: x, y: y});
+    console.log('x location: ' + x + '; y location: ' + y);
+  }
+
+  $(document).click(function(loc) {
+    logClicks(loc.pageX, loc.pageY);
+  });
 });

@@ -1,13 +1,17 @@
 define([
     "user",
     "app/bioView",
-    "app/workView"
-  ], function(data, bioView, workView){
+    "app/workView",
+    "app/projectsView",
+    "app/educationView"
+  ], function(data, bioView, workView, projectsView, educationView){
     
     var resumeBuilder = {
       build: function(){
-        bioView.render();
-        workView.render();
+        bioView.display();
+        workView.display();
+        projectsView.display();
+        educationView.display();
       }
     };
 

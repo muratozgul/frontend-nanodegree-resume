@@ -32,7 +32,7 @@ define(["app/templates", "user"], function(templates, user){
   }
 
   return {
-    render: render
+    display: render
   };
   
 });
