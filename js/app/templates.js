@@ -1,6 +1,6 @@
 define([], function(){
 
-  var templates: {
+  var templates = {
     HTMLheaderName : '<h1 id="name">%data%</h1>',
     HTMLheaderRole : '<span>%data%</span><hr>',
 
@@ -19,7 +19,7 @@ define([], function(){
     HTMLskills : '<li class="flex-item"><span class="white-text">%data%</span></li>',
 
     HTMLworkStart : '<div class="work-entry"></div>',
-    HTMLworkEmployer : '<a href="#">%data%';
+    HTMLworkEmployer : '<a href="#">%data%',
     HTMLworkTitle : ' - %data%</a>',
     HTMLworkDates : '<div class="date-text">%data%</div>',
     HTMLworkLocation : '<div class="location-text">%data%</div>',
@@ -32,14 +32,14 @@ define([], function(){
     HTMLprojectImage : '<img src="%data%">',
 
     HTMLschoolStart : '<div class="education-entry"></div>',
-    HTMLschoolName : '<a href="#">%data%';
+    HTMLschoolName : '<a href="#">%data%',
     HTMLschoolDegree : ' -- %data%</a>',
     HTMLschoolDates : '<div class="date-text">%data%</div>',
     HTMLschoolLocation : '<div class="location-text">%data%</div>',
     HTMLschoolMajor : '<em><br>Major: %data%</em>',
 
     HTMLonlineClasses : '<h3>Online Classes</h3>',
-    HTMLonlineTitle : '<a href="#">%data%';
+    HTMLonlineTitle : '<a href="#">%data%',
     HTMLonlineSchool : ' - %data%</a>',
     HTMLonlineDates : '<div class="date-text">%data%</div>',
     HTMLonlineURL : '<br><a href="#">%data%</a>',

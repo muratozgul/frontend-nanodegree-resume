@@ -1,13 +1,16 @@
-define(["user"], function(data){
-  var resumeBuilder = {
-    start: function(){
-      console.log("resumeBuilder starting...");
-      console.log("Bio:", data.bio);
-      console.log("Edu:", data.education);
-      console.log("Proj:", data.projects);
-      console.log("Work:", data.work);
-    }
-  };
+define([
+    "user",
+    "app/bioView",
+    "app/workView"
+  ], function(data, bioView, workView){
+    
+    var resumeBuilder = {
+      build: function(){
+        bioView.render();
+        workView.render();
+      }
+    };
 
-  return resumeBuilder;
-});
+    return resumeBuilder;
+  }
+);
