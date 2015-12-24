@@ -12,6 +12,14 @@
                               horizontally within the column  */
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar span {
+  padding: 0;
+}
+
 #name, #role {
   display: inline-block;
 }
@@ -40,6 +48,7 @@
 }
 
 #header {
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 

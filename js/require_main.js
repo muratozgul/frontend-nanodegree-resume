@@ -6,6 +6,7 @@ requirejs.config({
   paths: {
     async: "libs/requirejs/async",
     jquery: "libs/jquery/jQuery",
+    bootstrap: "libs/bootstrap/bootstrap.min",
     user: "data/user",
     builder: "app/resumeBuilder"
   },
@@ -14,6 +15,9 @@ requirejs.config({
     jquery: {
       deps: [],
       exports: "$"
+    },
+    bootstrap: { 
+      deps: ["jquery"] 
     },
     user: {
       deps: ["jquery", "data/bio", "data/education", "data/projects", "data/work"],
@@ -26,7 +30,7 @@ requirejs.config({
   }
 });
 
-require(["builder"], function(resumeBuilder, GoogleMapsLoader){
+require(["builder", "bootstrap"], function(resumeBuilder){
   
   var internationalizeButton = '<button id="i18n-button">Internationalize</button>';
 

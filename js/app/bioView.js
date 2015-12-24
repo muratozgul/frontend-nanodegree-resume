@@ -20,20 +20,28 @@ define(["app/templates", "user"], function(templates, user){
   }
 
   //wrap in bootstrap column
-  function columnify(value, colSpanArr){
+  function columnify(value, colSpanArr, additionalClasses){
     var classString = colSpanArr.map(function(data){
       return "col-" + data;
     }).join(" ");
+
+    if(additionalClasses){
+      additionalClasses.forEach(function (cls){
+        classString += " " + cls;
+      });
+    }
 
     return '<div class="' + classString + '">' + value + '</div>';
   }
   
   function render(){
     //populate name & role
-    $("#header").prepend( columnify(templates["HTMLseperator"], ["xs-12"]) );
+    $("#header").prepend( columnify(templates["HTMLseperator"], ["xs-12"], ["hidden-xs"]) );
 
     var nameAndRole = insert("HTMLheaderName", user.bio.name) + insert("HTMLheaderRole", user.bio.role);
-    $("#header").prepend( columnify(nameAndRole, ["xs-12"]) );
+    $("#header").prepend( columnify(nameAndRole, ["xs-12"], ["hidden-xs"]) );
+
+    $("#js-brand").html(user.bio.name);
 
     //populate header contacts
     appendInto("#topContacts", "HTMLmobile", user.bio.contacts.mobile);
