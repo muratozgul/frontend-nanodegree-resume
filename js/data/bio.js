@@ -9,7 +9,7 @@ define([], function() {
       "twitter": "mrt_ozgul",
       "location": "Mountain View, CA"
     },
-    "welcomeMessage": "Hello!",
+    "welcomeMessage": "Hi! Lorem ipsum dolor sit amet, consectetur adipiscing elit!",
     "skills": [
       "Cooking", 
       "Programming",

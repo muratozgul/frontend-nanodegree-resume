@@ -5,32 +5,50 @@
   <meta http-equiv="X_UA_Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Murat Ozgul's Resume</title>
+  <link href="css/style.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+  <div id="main" class="container-fluid">
+    
+    <div id="header" class="row">
+      <div class="col-xs-12">
+        <ul id="topContacts" class="list-inline"></ul>
+      </div>
     </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+    
+    <div id="workExperience" class="row">
+      <div class="col-xs-12">
+        <h2>Work Experience</h2>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
+
+    <div id="projects" class="row">
+      <div class="col-xs-12">
+        <h2>Projects</h2>
+      </div>
     </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
+
+    <div id="education" class="row">
+      <div class="col-xs-12">
+        <h2>Education</h2>
+      </div>
     </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-      <div id="map"></div>
+
+    <div id="mapDiv" class="row">
+      <div class="col-xs-12">
+        <h2>Where I've Lived and Worked</h2>
+        <div id="map"></div>
+      </div>
     </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+
+    <div id="lets-connect" class="row text-center">
+      <div class="col-xs-12">
+        <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="list-inline"></ul>
+        <h2 class="orange center-text"><span id="internationalize">Internationalize</span></h2>
+      </div>
     </div>
   </div>
   <!-- We are loading all js files via requireJS (including google maps) -->

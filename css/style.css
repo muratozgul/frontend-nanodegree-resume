@@ -1,115 +1,80 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+.vertical-align-strong,
+.vertical-align-weak {
+  display: flex;
+  flex-direction: row;
 }
 
-.clear-fix {
-  overflow: auto;
+.vertical-align-strong > [class^="col-"],
+.vertical-align-strong > [class*=" col-"] {
+  display: flex;
+  align-items: center;     /* Align the flex-items vertically */
+  justify-content: center; /* Optional, to align inner flex-items 
+                              horizontally within the column  */
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+#name, #role {
+  display: inline-block;
 }
 
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+.thin {
+  font-weight: normal;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+.img-wrap {
+  display: inline-block;
 }
 
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+#map {
+  display: block;
+  height: 350px;
+  width: 100%;
 }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+#mapDiv {
+  height: 450px;
+  padding-bottom: 5%;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
+#header, #lets-connect {
+  background-color: black;
 }
 
+#header {
+  padding-bottom: 10px;
+}
+
+#projects, #mapDiv {
+  background-color: #f3f3f3;
+}
+
+#internationalize {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#internationalize:hover {
+  color: white;
+}
+
+.education-entry, .project-entry, .work-entry {
+  margin-bottom: 20px;
+}
 
 .date-text {
   font-style: italic;
   font-size: 14px;
   color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
-}
-
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+  margin-bottom: 8px;
 }
 
 .orange {
-  background-color: #f5ae23;
+  /*background-color: #f5ae23;*/
+  background-color: #e95332;
 }
 
-.orange-text {
-  color: #f5ae23;
+.orange-text, h3.orange-text {
+  /*color: #f5ae23;*/
+  color: #e95332;
 }
 
 .white-text {
@@ -119,96 +84,34 @@ a {
 
 .gray {
   background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
 }
 
 .dark-gray {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
 }
 
 span {
   padding: 5px;
 }
 
-#lets-connect {
-  text-align: center;
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
 }
 
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+p {
+  font-size: 14px;
+  color: #333;
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+a {
+  color: #1199c3;
+  text-decoration: none;
 }

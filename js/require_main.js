@@ -4,8 +4,6 @@ requirejs.config({
   baseUrl: "js",
   
   paths: {
-    //text: "libs/requirejs/text",
-    //json: "libs/requirejs/json",
     async: "libs/requirejs/async",
     jquery: "libs/jquery/jQuery",
     user: "data/user",
@@ -30,16 +28,16 @@ requirejs.config({
 
 require(["builder"], function(resumeBuilder, GoogleMapsLoader){
   
-  var internationalizeButton = '<button>Internationalize</button>';
+  var internationalizeButton = '<button id="i18n-button">Internationalize</button>';
 
   $(document).ready(function() {
     resumeBuilder.build();
     
     // add name i18n button
-    $("#main").append(internationalizeButton);
+    //$("#main").append(internationalizeButton);
 
     // bind click listener to name i18n button
-    $('button').click(function() {
+    $('#internationalize').click(function() {
       var iName = inName($('#name').html()) || function(){};
       $('#name').html(iName);  
     });
