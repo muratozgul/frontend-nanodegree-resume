@@ -28,8 +28,11 @@ define(["app/templates", "user"], function(templates, user){
 
       // populate project images if any
       if(projects[project].images && projects[project].images.length > 0){
+        insertInto(".project-entry:last", "HTMLprojectImageWrapper", "");
+
         for(var image in projects[project].images){
-          insertInto(".project-entry:last", "HTMLprojectImage", projects[project].images[image]);
+          $(".project-entry:last").find()
+          insertInto(".project-entry:last > .js-image-wrapper", "HTMLprojectImage", projects[project].images[image]);
         }
       }
     }

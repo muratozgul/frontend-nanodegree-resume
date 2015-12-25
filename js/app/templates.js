@@ -32,7 +32,8 @@ define([], function(){
     HTMLprojectTitle : '<a href="#">%data%</a>',
     HTMLprojectDates : '<div class="date-text">%data%</div>',
     HTMLprojectDescription : '<p>%data%</p>',
-    HTMLprojectImage : '<img src="%data%">',
+    HTMLprojectImageWrapper: '<div class="row js-image-wrapper"></div>',
+    HTMLprojectImage : '<div class="col-sm-3"><img src="%data%" class="img-responsive project-image"></div>',
 
     HTMLschoolStart : '<div class="col-xs-12 education-entry"></div>',
     HTMLschoolName : '<a href="#">%data%',
