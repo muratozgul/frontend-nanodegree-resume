@@ -14,7 +14,7 @@ define(["app/templates", "user"], function(templates, user){
     // populate projects
     var projects = user.projects.projects;
 
-    for(var project in projects){
+    for(var project=0; project < projects.length; project++){
       $("#projects").append(templates.HTMLprojectStart);
 
       // populate title

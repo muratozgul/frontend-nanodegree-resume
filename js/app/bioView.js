@@ -61,7 +61,7 @@ define(["app/templates", "user"], function(templates, user){
     if(user.bio.skills.length > 0){
       //$("#header").append(templates.HTMLskillsStart);
       appendInto("#header", "HTMLskillsStart", null, ["xs-12", "sm-9", "md-9", "lg-9"]);
-      for(var index in user.bio.skills){
+      for(var index=0; index < user.bio.skills.length; index++){
         appendInto("#skills", "HTMLskills", user.bio.skills[index]);
       }
     }

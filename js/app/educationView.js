@@ -27,7 +27,7 @@ define(["app/templates", "user"], function(templates, user){
       $(".education-entry:last").append(formattedName + formattedDegree);
 
       // populate dates
-      insertInto(".education-entry:last", "HTMLschoolDates", school.dates);
+      insertInto(".education-entry:last", "HTMLschoolDates", school.date);
 
       // populate location
       insertInto(".education-entry:last", "HTMLschoolLocation", school.location);
@@ -39,7 +39,7 @@ define(["app/templates", "user"], function(templates, user){
     // populate online courses
     $("#education").append(templates.HTMLonlineClasses);
 
-    for(var index in courses){
+    for(var index=0; index < courses.length; index++){
       var course = courses[index];
 
       $("#education").append(templates.HTMLschoolStart);
@@ -50,7 +50,7 @@ define(["app/templates", "user"], function(templates, user){
       $(".education-entry:last").append(formattedTitle + formattedSchool);
 
       // populate dates
-      insertInto(".education-entry:last", "HTMLonlineDates", course.dates);
+      insertInto(".education-entry:last", "HTMLonlineDates", course.date);
       $(".education-entry:last").append("<br>");
     }
   }

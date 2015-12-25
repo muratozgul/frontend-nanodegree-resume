@@ -6,7 +6,7 @@ define([], function() {
         "location": "Moffett Airfiled, CA",
         "degree": "MS",
         "majors": ["Software Engineering"],
-        "dates": 2015,
+        "date": "2014 - 2015",
         "url": null
       },
       {
@@ -14,7 +14,7 @@ define([], function() {
         "location": "Istanbul, TURKEY",
         "degree": "BSc",
         "majors": ["Industrial Engineering"],
-        "dates": 2010,
+        "date": "2006 - 2010",
         "url": null
       }
     ],
@@ -22,7 +22,7 @@ define([], function() {
       {
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates": 2015,
+        "date": "2015",
         "url": "https://www.udacity.com"
       }
     ]

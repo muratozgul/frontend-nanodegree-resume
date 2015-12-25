@@ -12,7 +12,7 @@ define(["app/templates", "user"], function(templates, user){
 
   function render(){
     //populate jobs
-    for(var job in user.work.jobs){
+    for(var job=0; job < user.work.jobs.length; job++){
       $("#workExperience").append(templates.HTMLworkStart);
 
       //populate title
